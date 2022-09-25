@@ -1,0 +1,8 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "exc-ecommerce-app": "apps/exc-ecommerce-app",
+    "exc-ecommerce-app-e2e": "apps/exc-ecommerce-app-e2e"
+  }
+}
