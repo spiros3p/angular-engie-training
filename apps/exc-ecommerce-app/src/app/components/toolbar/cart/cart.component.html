@@ -1,0 +1,5 @@
+<button mat-button routerLink="/cart">
+  <span>{{ cartTotalPrice ? (cartTotalPrice | currency: 'EUR') : '' }}</span>
+  <span>({{ totalQuantity }})</span>
+  <mat-icon>shopping_cart</mat-icon>
+</button>

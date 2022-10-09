@@ -1,0 +1,84 @@
+:host {
+  max-width: 288px;
+  width: 100%;
+}
+.example-card {
+  margin-bottom: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: white;
+  height: 230px;
+
+  & img {
+    object-fit: contain;
+  }
+}
+
+.buttons-container {
+  margin-bottom: 6px;
+  display: flex;
+  & button {
+    margin: 3px 5px;
+  }
+
+  & .add-item-to-cart-form {
+    display: flex;
+    margin-left: auto;
+
+    & button {
+      background-color: rgb(159, 253, 18);
+    }
+
+    & .form-control-container {
+      width: 60px;
+      align-self: center;
+      text-align: end;
+
+      & input {
+        width: 35px;
+        height: 35px;
+        margin: auto 0;
+        border: 1px solid #0000005e;
+        border-radius: 20px;
+        text-align: center;
+        /* Chrome, Safari, Edge, Opera */
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+        /* Firefox */
+        &[type='number'] {
+          -moz-appearance: textfield;
+        }
+
+        &.error {
+          border: 1px solid red;
+        }
+      }
+    }
+  }
+}
+
+.mat-card-subtitle {
+  margin-bottom: 4px !important;
+}
+
+.dates-container {
+  font-size: 13px;
+  margin-bottom: 4px;
+
+  & span {
+    color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+.description-container {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 13px;
+  max-width: 235px;
+  margin: 0 auto;
+}
+
+.highlight-value {
+  color: rgb(0, 138, 202);
+}

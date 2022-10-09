@@ -1,0 +1,68 @@
+<table mat-table [dataSource]="cart" class="mat-elevation-z8">
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Picture Column -->
+  <ng-container matColumnDef="pictureUrl">
+    <th mat-header-cell *matHeaderCellDef>Picture</th>
+    <td mat-cell *matCellDef="let element" class="picture-container">
+      <img
+        src="{{ element.pictureUrl || emptyPictureUrl }}"
+        alt="image of item"
+      />
+    </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name" class="column-name">
+    <th mat-header-cell *matHeaderCellDef>Name</th>
+    <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+  </ng-container>
+
+  <!-- Description Column -->
+  <ng-container matColumnDef="description">
+    <th mat-header-cell *matHeaderCellDef>Description</th>
+    <td mat-cell *matCellDef="let element" class="cell-description">
+      {{
+        element.description.length > 31
+          ? element.description.slice(0, 31) + '...'
+          : element.description
+      }}
+    </td>
+  </ng-container>
+
+  <!-- Quantity Column -->
+  <ng-container matColumnDef="quantity">
+    <th mat-header-cell *matHeaderCellDef>Quantity</th>
+    <td mat-cell *matCellDef="let element">
+      {{ element.quantity }}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="price">
+    <th mat-header-cell *matHeaderCellDef>Unit price</th>
+    <td mat-cell *matCellDef="let element">{{ element.price }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef>Actions</th>
+    <td mat-cell *matCellDef="let element">
+      <button
+        class="delete-button"
+        mat-mini-fab
+        aria-label="Example icon button with a delete icon"
+        (click)="onDelete(element)"
+      >
+        <mat-icon>delete</mat-icon>
+      </button>
+      <angular-engie-training-edit-quantity-form
+        [cartItem]="element"
+        (updateCartItemQuantity)="onUpdateCartItemQuantity($event)"
+      ></angular-engie-training-edit-quantity-form>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
+<p *ngIf="!cart.length" class="empty-cart">Cart is empty</p>

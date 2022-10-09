@@ -1,0 +1,73 @@
+<mat-card class="example-card" data-testid="item" angularEngieTrainingHighlight>
+  <mat-card-title-group>
+    <mat-card-title [title]="item.name"
+      ><b>{{ item.name | replaceTitle }}</b></mat-card-title
+    >
+    <mat-card-subtitle>
+      <div class="dates-container">
+        <i>Date added: </i> <br />
+        <span>{{ item.dateAdded | date: 'dd/MM/yy' }}</span>
+      </div>
+      <div class="dates-container">
+        <i>Date last updated: </i> <br />
+        <span>{{ (item.dateUpdated | date: 'dd/MM/yy') || '-' }}</span>
+      </div>
+      <div>
+        <i>Price: </i>
+        <b class="highlight-value">{{ item.price | currency: 'EUR' }}</b>
+      </div>
+      <div>
+        <i>quantity: </i>
+        <b class="highlight-value">{{ item.quantity | unit }}</b>
+      </div>
+    </mat-card-subtitle>
+    <img mat-card-md-image [src]="item.pictureUrl || emptyPictureUrl" />
+  </mat-card-title-group>
+  <div class="buttons-container">
+    <button
+      class="edit-button"
+      mat-mini-fab
+      aria-label="Example icon button with a edit icon"
+      (click)="openDialog(item)"
+    >
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button
+      class="delete-button"
+      mat-mini-fab
+      aria-label="Example icon button with a delete icon"
+      (click)="onDelete(item)"
+    >
+      <mat-icon>delete</mat-icon>
+    </button>
+    <form [formGroup]="addItemToCartForm" class="add-item-to-cart-form">
+      <div class="form-control-container">
+        <input
+          [ngClass]="{
+            error:
+              addItemToCartForm.get('quantity')!.invalid &&
+              addItemToCartForm.get('quantity')!.touched &&
+              addItemToCartForm.get('quantity')!.dirty
+          }"
+          matInput
+          type="number"
+          formControlName="quantity"
+          placeholder="No."
+        />
+      </div>
+      <button
+        [disabled]="!this.addItemToCartForm.valid"
+        mat-mini-fab
+        aria-label="Example icon button with a shopping cart"
+        (click)="onSubmitItemToCart(item)"
+      >
+        <mat-icon>add_shopping_cart</mat-icon>
+      </button>
+    </form>
+  </div>
+  <mat-card-content>
+    <div class="description-container" [title]="item.description">
+      {{ item.description | replaceDescription }}
+    </div>
+  </mat-card-content>
+</mat-card>

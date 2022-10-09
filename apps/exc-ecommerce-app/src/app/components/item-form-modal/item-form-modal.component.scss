@@ -1,0 +1,21 @@
+.dafuq-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: #d9f6ff;
+  padding: 20px 25px;
+  transform: translate(-50%, -50%);
+
+  & button:last-child {
+    margin-left: 5px;
+  }
+}
+
+.dafuq-dialog-container {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(5px);
+}

@@ -1,0 +1,32 @@
+<div *ngIf="user" class="existing-user-container">
+  <span>{{ user | titlecase }}</span>
+  <button aria-label="Example icon button with " (click)="onRemoveUser()">
+    x
+  </button>
+</div>
+
+<div *ngIf="!user" class="no-user-container">
+  <form [formGroup]="submitUserForm" class="submit-user-form">
+    <div class="form-control-container">
+      <input
+        [ngClass]="{
+          error:
+            submitUserForm.get('user')!.invalid &&
+            submitUserForm.get('user')!.touched &&
+            submitUserForm.get('user')!.dirty &&
+            user === ''
+        }"
+        formControlName="user"
+        placeholder="Enter user"
+      />
+    </div>
+    <button
+      [disabled]="!this.submitUserForm.valid"
+      mat-mini-fab
+      aria-label="Example icon button with a"
+      (click)="onSubmitUser()"
+    >
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </form>
+</div>

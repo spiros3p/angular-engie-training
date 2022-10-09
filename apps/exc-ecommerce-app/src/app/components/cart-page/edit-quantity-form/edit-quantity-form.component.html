@@ -1,0 +1,26 @@
+<form [formGroup]="editItemInCartForm" class="edit-item-in-cart-form">
+  <div class="form-control-container">
+    <input
+      [ngClass]="{
+        error:
+          editItemInCartForm.get('quantity')!.invalid &&
+          editItemInCartForm.get('quantity')!.touched &&
+          editItemInCartForm.get('quantity')!.dirty
+      }"
+      matInput
+      type="number"
+      formControlName="quantity"
+      placeholder="No."
+      value="{{ getQuantity }}"
+    />
+  </div>
+  <button
+    class="edit-button"
+    [disabled]="!this.editItemInCartForm.valid"
+    mat-mini-fab
+    aria-label="Example icon button with a shopping cart"
+    (click)="onEditItemInCart()"
+  >
+    <mat-icon>refresh</mat-icon>
+  </button>
+</form>

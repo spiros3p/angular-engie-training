@@ -1,0 +1,116 @@
+{
+  "items": [
+    {
+      "id": "698b8413-12e0-405a-858e-a5d89440fd37",
+      "dateAdded": "2022-09-24T16:10:18.053Z",
+      "dateUpdated": "2022-10-07T21:58:39.555Z",
+      "name": "Nutella",
+      "description": "A 350g jar of hazelnut spread A 350g jar of hazelnut spread A 350g jar of hazelnut spread A 350g jar of hazelnut spread",
+      "quantity": 13,
+      "pictureUrl": "https://vicofoodbox.com/wp-content/uploads/2021/06/BL077.jpg",
+      "price": 9
+    },
+    {
+      "id": "ff00c3c3-dd21-42e8-aacf-4a61f4f22b4d",
+      "dateAdded": "2022-09-20T16:10:18.053Z",
+      "dateUpdated": "2022-10-09T17:50:48.621Z",
+      "name": "Speculoos",
+      "description": "",
+      "quantity": 55,
+      "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB14CJMRNhx8k_wMui4bC8G29Kj7yrFUFtyA&usqp=CAU",
+      "price": 9
+    },
+    {
+      "id": "c44c797f-14d4-4c52-90ad-fcad7d98b2e0",
+      "dateAdded": "2022-09-24T16:10:18.053Z",
+      "dateUpdated": "2022-10-07T21:58:55.290Z",
+      "name": "Nutella 2",
+      "description": "A 350g jar of hazelnut spread",
+      "quantity": 27,
+      "pictureUrl": "https://vicofoodbox.com/wp-content/uploads/2021/06/BL077.jpg",
+      "price": 7
+    },
+    {
+      "id": "7fef735b-bcdf-4deb-984a-3651e45cf73c",
+      "dateAdded": "2022-09-20T16:10:18.053Z",
+      "dateUpdated": "2022-10-07T21:58:44.698Z",
+      "name": "Speculoos 2",
+      "description": "A 400g jar of biscuit spread",
+      "quantity": 15,
+      "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB14CJMRNhx8k_wMui4bC8G29Kj7yrFUFtyA&usqp=CAU",
+      "price": 11
+    },
+    {
+      "id": "rra4dxa",
+      "dateAdded": "2022-10-06T22:34:41.322Z",
+      "dateUpdated": "2022-10-07T16:03:43.016Z",
+      "name": "Snack",
+      "description": "The best candy in the world",
+      "quantity": 98,
+      "pictureUrl": null,
+      "price": 12
+    },
+    {
+      "id": "TkEpNfz",
+      "dateAdded": "2022-10-07T09:19:08.982Z",
+      "dateUpdated": "2022-10-07T21:59:13.790Z",
+      "name": "Saltletts",
+      "description": "this is another snack",
+      "quantity": 93,
+      "pictureUrl": "https://lorenz-snacks.com/sites/default/files/styles/540/public/2021-06/saltletts_brezel_540x540ox.png?itok=M6Tt2cY2",
+      "price": 30
+    }
+  ],
+  "shopping-cart": [
+    {
+      "id": "31241",
+      "itemId": "698b8413-12e0-405a-858e-a5d89440fd37",
+      "user": "nikos",
+      "name": "Nutella",
+      "description": "A 350g jar of hazelnut spread A 350g jar of hazelnut spread A 350g jar of hazelnut spread A 350g jar of hazelnut spread",
+      "quantity": 3,
+      "pictureUrl": "https://vicofoodbox.com/wp-content/uploads/2021/06/BL077.jpg",
+      "price": 9
+    },
+    {
+      "itemId": "698b8413-12e0-405a-858e-a5d89440fd37",
+      "user": "spiros",
+      "name": "Nutella",
+      "description": "A 350g jar of hazelnut spread A 350g jar of hazelnut spread A 350g jar of hazelnut spread A 350g jar of hazelnut spread",
+      "quantity": 2,
+      "pictureUrl": "https://vicofoodbox.com/wp-content/uploads/2021/06/BL077.jpg",
+      "price": 9,
+      "id": "WNfHk4s"
+    },
+    {
+      "itemId": "698b8413-12e0-405a-858e-a5d89440fd37",
+      "user": "lid",
+      "name": "Nutella",
+      "description": "A 350g jar of hazelnut spread A 350g jar of hazelnut spread A 350g jar of hazelnut spread A 350g jar of hazelnut spread",
+      "quantity": 3,
+      "pictureUrl": "https://vicofoodbox.com/wp-content/uploads/2021/06/BL077.jpg",
+      "price": 9,
+      "id": "PyLe5Pv"
+    },
+    {
+      "itemId": "ff00c3c3-dd21-42e8-aacf-4a61f4f22b4d",
+      "user": "lid",
+      "name": "Speculoos",
+      "description": "",
+      "quantity": 2,
+      "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB14CJMRNhx8k_wMui4bC8G29Kj7yrFUFtyA&usqp=CAU",
+      "price": 9,
+      "id": "xPifLoF"
+    },
+    {
+      "itemId": "c44c797f-14d4-4c52-90ad-fcad7d98b2e0",
+      "user": "sp",
+      "name": "Nutella 2",
+      "description": "A 350g jar of hazelnut spread",
+      "quantity": 23,
+      "pictureUrl": "https://vicofoodbox.com/wp-content/uploads/2021/06/BL077.jpg",
+      "price": 7,
+      "id": "yr2Vbai"
+    }
+  ]
+}

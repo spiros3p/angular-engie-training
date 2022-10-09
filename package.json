@@ -7,15 +7,18 @@
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2020 browser module main",
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "jsonserver": "json-server --watch ./apps/exc-ecommerce-app/jsonserver/db.json --port 5000"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~14.2.0",
+    "@angular/cdk": "^14.2.2",
     "@angular/common": "~14.2.0",
     "@angular/compiler": "~14.2.0",
     "@angular/core": "~14.2.0",
     "@angular/forms": "~14.2.0",
+    "@angular/material": "^14.2.2",
     "@angular/platform-browser": "~14.2.0",
     "@angular/platform-browser-dynamic": "~14.2.0",
     "@angular/router": "~14.2.0",
@@ -32,6 +35,7 @@
     "@angular/cli": "~14.2.0",
     "@angular/compiler-cli": "~14.2.0",
     "@angular/language-service": "~14.2.0",
+    "@ngneat/spectator": "^11.2.0",
     "@nrwl/cli": "14.7.13",
     "@nrwl/cypress": "14.7.13",
     "@nrwl/eslint-plugin-nx": "14.7.13",

@@ -1,0 +1,55 @@
+{
+  "items": [
+    {
+      "id": "698b8413-12e0-405a-858e-a5d89440fd37",
+      "name": "Nutella",
+      "description": "A 350g jar of hazelnut spread A 350g jar of hazelnut spread A 350g jar of hazelnut spread A 350g jar of hazelnut spread",
+      "quantity": 10,
+      "pictureUrl": "https://vicofoodbox.com/wp-content/uploads/2021/06/BL077.jpg",
+      "dateAdded": "2022-09-24T16:10:18.053Z",
+      "dateUpdated": "",
+      "price": 7
+    },
+    {
+      "id": "ff00c3c3-dd21-42e8-aacf-4a61f4f22b4d",
+      "name": "Speculoos",
+      "description": "",
+      "quantity": 13,
+      "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB14CJMRNhx8k_wMui4bC8G29Kj7yrFUFtyA&usqp=CAU",
+      "dateAdded": "2022-09-20T16:10:18.053Z",
+      "dateUpdated": "2022-09-23T16:10:18.053Z",
+      "price": 9
+    },
+    {
+      "id": "c44c797f-14d4-4c52-90ad-fcad7d98b2e0",
+      "name": "Nutella 2",
+      "description": "A 350g jar of hazelnut spread",
+      "quantity": 10,
+      "pictureUrl": "https://vicofoodbox.com/wp-content/uploads/2021/06/BL077.jpg",
+      "dateAdded": "2022-09-24T16:10:18.053Z",
+      "dateUpdated": "",
+      "price": 7
+    },
+    {
+      "id": "7fef735b-bcdf-4deb-984a-3651e45cf73c",
+      "name": "Speculoos 2",
+      "description": "A 400g jar of biscuit spread",
+      "quantity": 13,
+      "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB14CJMRNhx8k_wMui4bC8G29Kj7yrFUFtyA&usqp=CAU",
+      "dateAdded": "2022-09-20T16:10:18.053Z",
+      "dateUpdated": "2022-09-23T16:10:18.053Z",
+      "price": 9
+    }
+  ],
+  "shopping-cart": [
+    {
+      "id": "7fef735b-bcdf-4deb-984a-3651e45c333c",
+      "userId": "spiros",
+      "name": "Speculoos 2",
+      "description": "A 400g jar of biscuit spread",
+      "quantity": 1,
+      "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB14CJMRNhx8k_wMui4bC8G29Kj7yrFUFtyA&usqp=CAU",
+      "price": 9
+    }
+  ]
+}

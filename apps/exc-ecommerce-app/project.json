@@ -6,7 +6,9 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/exc-ecommerce-app",
         "index": "apps/exc-ecommerce-app/src/index.html",
@@ -18,7 +20,10 @@
           "apps/exc-ecommerce-app/src/favicon.ico",
           "apps/exc-ecommerce-app/src/assets"
         ],
-        "styles": ["apps/exc-ecommerce-app/src/styles.scss"],
+        "styles": [
+          "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+          "apps/exc-ecommerce-app/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -83,7 +88,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/exc-ecommerce-app"],
+      "outputs": [
+        "coverage/apps/exc-ecommerce-app"
+      ],
       "options": {
         "jestConfig": "apps/exc-ecommerce-app/jest.config.ts",
         "passWithNoTests": true

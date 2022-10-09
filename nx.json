@@ -54,6 +54,16 @@
     },
     "@nrwl/angular:component": {
       "style": "scss"
+    },
+    "@ngneat/spectator:spectator-component": {
+      "style": "scss",
+      "jest": "true"
+    },
+    "@ngneat/spectator:spectator-pipe": {
+      "jest": "true"
+    },
+    "@ngneat/spectator:spectator-directive": {
+      "jest": "true"
     }
   },
   "defaultProject": "exc-ecommerce-app"

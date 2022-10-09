@@ -1,0 +1,23 @@
+.app-container {
+  max-width: 980px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+
+::ng-deep .delete-button {
+  background-color: red !important;
+  & .mat-icon {
+    color: white;
+  }
+}
+
+::ng-deep .edit-button {
+  background-color: rgb(0, 145, 255) !important;
+  &:disabled {
+    background-color: grey !important;
+  }
+  & .mat-icon {
+    color: white;
+  }
+}

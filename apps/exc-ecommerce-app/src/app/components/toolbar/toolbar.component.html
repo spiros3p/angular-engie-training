@@ -1,0 +1,23 @@
+<mat-toolbar class="top-toolbar">
+  <button
+    *ngIf="isCatalogRoute"
+    mat-raised-button
+    class="button-add"
+    (click)="openDialog()"
+  >
+    <span>Add new item</span>
+    <mat-icon>add</mat-icon>
+  </button>
+  <button
+    *ngIf="!isCatalogRoute"
+    mat-raised-button
+    class="button-back"
+    routerLink="/"
+  >
+    <mat-icon class="icon">arrow_back</mat-icon>
+    <span>Back to catalog</span>
+  </button>
+  <angular-engie-training-user [user]="user"></angular-engie-training-user>
+
+  <angular-engie-training-cart [user]="user"></angular-engie-training-cart>
+</mat-toolbar>

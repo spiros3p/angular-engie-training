@@ -1,0 +1,17 @@
+<mat-grid-list
+  [cols]="breakpoint"
+  class="custom-grid-list"
+  (window:resize)="onResize($event)"
+  rowHeight="300px"
+>
+  <mat-grid-tile *ngFor="let item of itemsList">
+    <angular-engie-training-item-catalog
+      [item]="item"
+      (deleteItem)="onDeleteItem($event)"
+      (updateItem)="onUpdateItem($event)"
+      (submitItemToCart)="onSubmitItemToCart($event)"
+    ></angular-engie-training-item-catalog>
+  </mat-grid-tile>
+  <p *ngIf="itemsFetched && !itemsList.length">Catalog is Empty</p>
+  <p *ngIf="!itemsFetched">Catalog is Loading</p>
+</mat-grid-list>

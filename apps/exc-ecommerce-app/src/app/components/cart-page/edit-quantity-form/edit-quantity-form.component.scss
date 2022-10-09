@@ -1,0 +1,38 @@
+:host {
+  display: inline-block;
+}
+
+.edit-item-in-cart-form {
+  display: flex;
+  margin-left: auto;
+
+  & .form-control-container {
+    align-self: center;
+    text-align: end;
+    margin-right: 7px;
+
+    & input {
+      width: 35px;
+      height: 35px;
+      margin: auto 0;
+      border: 1px solid #0000005e;
+      border-radius: 20px;
+      text-align: center;
+      /* Chrome, Safari, Edge, Opera */
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        // -webkit-appearance: none;
+        display: inline;
+        margin: 0;
+      }
+      /* Firefox */
+      &[type='number'] {
+        // -moz-appearance: textfield;
+      }
+
+      &.error {
+        border: 1px solid red;
+      }
+    }
+  }
+}

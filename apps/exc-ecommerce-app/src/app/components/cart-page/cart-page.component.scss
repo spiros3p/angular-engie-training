@@ -1,0 +1,60 @@
+:host {
+  // padding-top: 25px;
+}
+
+table {
+  width: 100%;
+}
+
+p.empty-cart {
+  text-align: center;
+  padding-top: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.mat-column-pictureUrl {
+  width: 10%;
+  &.mat-cell {
+    & img {
+      width: 50px;
+      height: 70px;
+      object-fit: contain;
+    }
+  }
+}
+
+.mat-column-name {
+  width: 20%;
+  &.mat-cell {
+    font-weight: bold;
+  }
+}
+
+.mat-column-description {
+  width: 25%;
+  &.mat-cell {
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.mat-column-quantity {
+  text-align: center;
+  &.mat-cell {
+  }
+}
+
+.mat-column-price {
+  text-align: center;
+  width: 14%;
+  &.mat-cell {
+  }
+}
+
+.mat-column-actions {
+  width: 22%;
+
+  & .delete-button {
+    margin-right: 20px;
+  }
+}
