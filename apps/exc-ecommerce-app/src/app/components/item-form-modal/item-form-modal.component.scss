@@ -2,7 +2,7 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  background-color: #d9f6ff;
+  background-color: hwb(0 96% 4%);
   padding: 20px 25px;
   transform: translate(-50%, -50%);
 
@@ -18,4 +18,16 @@
   width: 100vw;
   height: 100vh;
   backdrop-filter: blur(5px);
+}
+
+form{
+  padding-right: 6px;
+}
+
+.mat-form-field{
+  margin-left: 3%;
+  // margin-right: 7px;
+  &.w25{ width: 22%;}
+  &.w50{ width: 47%;}
+  &.w100{ width: 97%;}
 }

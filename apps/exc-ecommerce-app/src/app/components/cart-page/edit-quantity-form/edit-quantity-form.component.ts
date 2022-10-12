@@ -30,8 +30,12 @@ export class EditQuantityFormComponent implements OnInit, OnChanges {
     ]),
   });
 
-  get getQuantity() {
+  get itemFormQuantity() {
     return this.editItemInCartForm.get('quantity')?.value || 0;
+  }
+
+  set itemFormQuantity(value: number) {
+    this.editItemInCartForm.get('quantity')?.setValue(value);
   }
 
   constructor() {}
@@ -39,7 +43,7 @@ export class EditQuantityFormComponent implements OnInit, OnChanges {
   ngOnInit(): void {}
 
   ngOnChanges(changes: SimpleChanges): void {
-    this.editItemInCartForm.get('quantity')?.setValue(this.cartItem.quantity);
+    this.itemFormQuantity = this.cartItem.quantity;
   }
 
   onEditItemInCart() {

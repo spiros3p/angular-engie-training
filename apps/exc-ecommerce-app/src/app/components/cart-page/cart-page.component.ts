@@ -43,46 +43,59 @@ export class CartPageComponent implements OnInit {
   }
 
   onUpdateCartItemQuantity(event: { cartItem: CartItem; quantity: number }) {
-    if (event.quantity === event.cartItem.quantity) return;
+    const oldCartItem = event.cartItem;
+    const oldQuantityCartItem = oldCartItem.quantity;
+    const newQuantityCartItem = event.quantity;
+    if (oldQuantityCartItem === newQuantityCartItem) return;
+    
+    // this call is Unessecary if I was developing a my own backend as well...
+    this.itemService.getItem(oldCartItem.itemId).subscribe({
+      next: (oldCatalogItem) => {
 
-    this.itemService.getItem(event.cartItem.itemId).subscribe({
-      next: (item) => {
-        let catalogItem = item;
-
-        if (event.quantity > item.quantity) {
+        if (newQuantityCartItem > oldCatalogItem.quantity) {
           alert('The quantity is bigger than the available');
           return;
         }
 
-        const quantityDifference = event.cartItem.quantity - event.quantity;
-        catalogItem = {
-          ...catalogItem,
-          quantity: catalogItem.quantity + quantityDifference,
+        const newQuantityCatalogItem =
+          oldCatalogItem.quantity + oldQuantityCartItem - newQuantityCartItem;
+        const newCatalogItem = {
+          ...oldCatalogItem,
+          quantity: newQuantityCatalogItem,
         };
 
-        if (event.quantity === 0) {
-          this.cartService.deleteCartItem(event.cartItem.id).subscribe({
-            next: () => this.updateCatalog(event.cartItem.itemId, catalogItem),
-            error: console.error,
-          });
-        } else {
-          this.cartService
-            .updateCartItem(event.cartItem.id, {
-              ...event.cartItem,
-              quantity: event.quantity,
-            })
-            .subscribe({
-              next: () =>
-                this.updateCatalog(event.cartItem.itemId, catalogItem),
-              error: console.error,
-            });
+        if (newQuantityCartItem === 0) {
+          this.toDeleteCartItem(oldCartItem, newCatalogItem);
+        } else if (newQuantityCartItem > 0) {
+          this.toUpdateCartItem(oldCartItem, newQuantityCartItem, newCatalogItem);
         }
       },
       error: console.error,
     });
   }
 
-  updateCatalog(id: string, catalogItem: Item): void {
+  toDeleteCartItem(cartItem: CartItem, catalogItem: Item): void {
+    this.cartService.deleteCartItem(cartItem.id).subscribe({
+      next: () =>
+        this.toUpdateCatalogItem(cartItem.itemId, catalogItem),
+      error: console.error,
+    });
+  }
+
+  toUpdateCartItem(cartItem: CartItem, newQuantityCartItem: number, catalogItem: Item): void {
+    this.cartService
+    .updateCartItem(cartItem.id, {
+      ...cartItem,
+      quantity: newQuantityCartItem,
+    })
+    .subscribe({
+      next: () =>
+        this.toUpdateCatalogItem(cartItem.itemId, catalogItem),
+      error: console.error,
+    });
+  }
+
+  toUpdateCatalogItem(id: string, catalogItem: Item): void {
     this.itemService.updateItem(id, catalogItem).subscribe({
       next: () => this.cartService.refreshCart(),
       error: console.error,

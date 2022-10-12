@@ -23,13 +23,16 @@ export class ItemFormModalComponent implements OnInit {
       Validators.pattern(/^\d+$/), // only numbers
     ]),
   });
+  windowSize!: string;
 
   constructor(
     private dialogRef: MatDialogRef<ItemFormModalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Partial<Item>
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.onResize('');
+  }
   onSubmit() {
     if (this.form.valid) {
       this.dialogRef.close(this.form.value);
@@ -41,4 +44,17 @@ export class ItemFormModalComponent implements OnInit {
   close() {
     this.dialogRef.close();
   }
+
+    // Manual because NOT bootstrap ;P
+    onResize(event: any) {
+      // (window:resize)="onResize($event)"
+      // if (window.innerWidth <= 550) {
+      //   this.windowSize = 'sm';
+      // } else
+       if (window.innerWidth <= 1148) {
+        this.windowSize = 'md';
+      } else {
+        this.windowSize = 'lg';
+      }
+    }
 }
